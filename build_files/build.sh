@@ -12,13 +12,13 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf5 install -y tmux
 
-# Use a COPR Example:
-#
+# cosmic-desktop
 dnf5 -y copr enable ryanabx/cosmic-epoch
 dnf5 -y install cosmic-desktop
 dnf5 -y copr disable ryanabx/cosmic-epoch
-# Disable COPRs so they don't end up enabled on the final image:
-# dnf5 -y copr disable ublue-os/staging
+# Mulvard vpn
+dnf5 config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
+dnf5 install mullvad-vpn
 
 #### Example for enabling a System Unit File
 
