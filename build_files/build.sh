@@ -18,7 +18,7 @@ dnf5 -y install cosmic-desktop
 dnf5 -y copr disable ryanabx/cosmic-epoch
 # Mulvard vpn
 dnf5 config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
-dnf5 install mullvad-vpn
+dnf5 -y install mullvad-vpn
 
 #### Example for enabling a System Unit File
 
